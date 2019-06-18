@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "aef98c09-8285-4525-b6dd-7b4b370a21ee",
+		"name": "Exchange Rates API GitHub",
+		"description": "Welcome to the Rates Exchange API documentation. Here, you'll find details about our API and complete list of the available endpoints.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Get latest rates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/client/latest?apikey={{apiKeyId}}&base_currency=EUR&currencies=USD,JPY,KRW,CHF,AUD,GBP,EUR",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client",
+								"latest"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "{{apiKeyId}}"
+								},
+								{
+									"key": "base_currency",
+									"value": "EUR"
+								},
+								{
+									"key": "currencies",
+									"value": "USD,JPY,KRW,CHF,AUD,GBP,EUR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get detailed latest rates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/client/latestdetails?apikey={{apiKeyId}}&base_currency=EUR&currencies=USD,JPY,KRW,CHF,AUD,GBP,EUR",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client",
+								"latestdetails"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "{{apiKeyId}}"
+								},
+								{
+									"key": "base_currency",
+									"value": "EUR"
+								},
+								{
+									"key": "currencies",
+									"value": "USD,JPY,KRW,CHF,AUD,GBP,EUR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get history rates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/client/history?apiKey={{apiKeyId}}&base_currency=USD&date=2018-06-20&currencies=USD,JPY,KRW,CHF,AUD,GBP,EUR",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client",
+								"history"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{apiKeyId}}"
+								},
+								{
+									"key": "base_currency",
+									"value": "USD"
+								},
+								{
+									"key": "date",
+									"value": "2018-06-20"
+								},
+								{
+									"key": "currencies",
+									"value": "USD,JPY,KRW,CHF,AUD,GBP,EUR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get detailed history rates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/client/historydetails?apiKey={{apiKeyId}}&base_currency=USD&date=2018-06-20&currencies=USD,JPY,KRW,CHF,AUD,GBP,EUR",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client",
+								"historydetails"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{apiKeyId}}"
+								},
+								{
+									"key": "base_currency",
+									"value": "USD"
+								},
+								{
+									"key": "date",
+									"value": "2018-06-20"
+								},
+								{
+									"key": "currencies",
+									"value": "USD,JPY,KRW,CHF,AUD,GBP,EUR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get history rates for currency",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/client/historydates?apiKey={{apiKeyId}}&currency=usd&from_date=2018-06-01",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client",
+								"historydates"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{apiKeyId}}"
+								},
+								{
+									"key": "currency",
+									"value": "usd"
+								},
+								{
+									"key": "from_date",
+									"value": "2018-06-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Convert currency",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/client/convert?apiKey={{apiKeyId}}&from=usd&amount=100,56&date=2018-06-25&currencies=USD,JPY,KRW,CHF,AUD,GBP,EUR",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client",
+								"convert"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{apiKeyId}}"
+								},
+								{
+									"key": "from",
+									"value": "usd"
+								},
+								{
+									"key": "amount",
+									"value": "100,56"
+								},
+								{
+									"key": "date",
+									"value": "2018-06-25"
+								},
+								{
+									"key": "currencies",
+									"value": "USD,JPY,KRW,CHF,AUD,GBP,EUR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Convert currency details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/client/convertdetails?apiKey={{apiKeyId}}&from=usd&amount=100,56&date=2018-10-08&currencies=USD,JPY,KRW,CHF,AUD,GBP,EUR",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client",
+								"convertdetails"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{apiKeyId}}"
+								},
+								{
+									"key": "from",
+									"value": "usd"
+								},
+								{
+									"key": "amount",
+									"value": "100,56"
+								},
+								{
+									"key": "date",
+									"value": "2018-10-08"
+								},
+								{
+									"key": "currencies",
+									"value": "USD,JPY,KRW,CHF,AUD,GBP,EUR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get currencies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/client/currencies?apiKey={{apiKeyId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client",
+								"currencies"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{apiKeyId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Check if  API is alive",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/client/checkapi",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"client",
+						"checkapi"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
